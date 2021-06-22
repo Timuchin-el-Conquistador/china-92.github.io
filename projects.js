@@ -1,13 +1,13 @@
 
 const buttons = document.querySelectorAll('#button')
 let index = 0
-document.querySelectorAll('#project-tile')[0].style.display ='block'
+document.querySelectorAll('.project-tile')[0].style.display ='block'
 Array.from(buttons).forEach(el => el.addEventListener('click', function(){slider(el.value)}))
     
 
 function slider(value){
 
-const projects = document.querySelectorAll('#project-tile')
+const projects = document.querySelectorAll('.project-tile')
 if(value==='&#x25B6;&#xFE0F;'){
      index++
 }
