@@ -11,7 +11,7 @@ body{
 background-color: rgb(255, 255, 255);
 }
 
-.header{
+#welcome-section{
 height: 100vh;
 width: 100%;
 background-image: linear-gradient(#00bf8f, #001510);
@@ -24,7 +24,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 position: fixed;
-left: 10%
+left: 5%
 }
 
 #navbar ul{
@@ -67,11 +67,13 @@ font-weight: bold;
 font-size:  20px;
 text-decoration: none;
 }
-
-#welcome{
-
+.welcome{
 position: relative;
 top: 40vh;
+}
+#welcome{
+
+text-align: center;
 line-height: 0.9;
 font-size: 80px;
 }
@@ -85,7 +87,7 @@ display: none;
 .icon-menu{
 position: absolute;
 top: 0;
-right: 100px;
+right: 50px;
 display:none;
 color: blue;
 }
@@ -277,20 +279,17 @@ color: black;
 
 #projects{
 position: relative;
-width: 650px;
-height: 300px;
+width: 70%;
+height: 203px;
 margin: auto;
 margin-block: 50px;
-background-color: rgb(204, 196, 196);
+border: 2px solid red;
 }
 
-#project-tile{
-
+.project-tile{
 position: absolute;
-left: 13vw;
-width: 301px;
-margin: auto;
-margin-block: 50px;
+left: 30%;
+width: 40vw;
 display: none;
 }
 
@@ -307,26 +306,57 @@ background-color: blue;
 color: rgb(255, 255, 255);
 position: absolute;
 top: 37%;
-left: 25%;
+left: 17%;
 padding: 10px 40px 10px 40px;
 font-size: 20px;
 font-family: monospace;
 display: none;
 }
-
-#project-tile:hover .project1-img{
+.button2{
+    float: right;
+}
+.project-tile:hover .project1-img{
 opacity: 0.2;
 }
 
-#project-tile:hover .project1-link{
+.project-tile:hover .project1-link{
 display: inline;
 color: white
 }
-#footer{
-height: 200px;
-width: 100%;
-background-image: linear-gradient(#00bf8f, #001510);
+.project-tile:hover .project2-img{
+opacity: 0.2;
+border: 2px solid red;
 }
+    
+.project-tile:hover .project2-link{
+display: inline;
+color: white
+}
+
+#contacts{
+background-color: #086850;
+padding-bottom: 30px;
+}
+#contacts h1{
+    color: yellow;
+    text-align:  center;
+    margin-bottom: 50px;
+}
+#contacts div{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+#contacts div a{
+    margin-left: 30px;
+    color: yellow;
+}
+#contacts div a:hover{
+    position: relative;
+    top: 20px;
+}
+
 @media (min-width: 1450px){
     #navbar ul li a{
         font-size: 50px;
@@ -382,11 +412,11 @@ background-image: linear-gradient(#00bf8f, #001510);
     height: 500px;
     }
     }
-    @media (min-width:  551px) and (max-width: 900px){
+@media (min-width:  551px) and (max-width: 900px){
 .container{
 left: 9% 
 }
-#welcome{
+.welcome{
 top: 30vh;
 }
 .info-para h1{
@@ -433,9 +463,135 @@ font-size: 40px;
 #popUpJS{
 height: 500px;
 }
+.project-tile{
+    left: 25%;
 }
+.project1-img, .project2-img{
+    width: 250px;
+}
+.project1-link, .project2-link{
+top: 37%;
+left: 20%;
+}
+
+}
+@media  (max-width: 350px){
+
+    #navbar ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -3000px;
+    top: -10px;
+    height: 100vh;
+    width: 60vw;
+    background-color: white;
+    opacity: 0.5;
+    transition: 1.5s;
+    }
+    
+    #navbar ul li a{
+    font-size: 30px;
+    
+    }
+    #navbar ul li {
+    margin-inline: 0;
         
-@media  (max-width: 550px){
+    }
+    
+    
+    #navbar ul li a:hover:after{
+    left: 0;
+    top: 6vh;
+    
+    }
+    .header-text{
+    font-size: 30px;
+    
+    }
+    #welcome{
+    font-size: 45px;
+    
+    }
+    .my-photo{
+    display: none;
+    }
+    
+    .info-para{
+    width: 100%
+    }
+    .info-para h1{
+    font-size: 30px;
+    }
+    .info-para p{
+    font-size: 18px;
+    position: relative;
+    margin-inline: 0;
+    }
+       
+    .info-para p:before{
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    }
+           
+       
+    
+    .skills-img-container{
+    display: inline;
+    }
+    .skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .skills-text{
+    font-size: 35px;
+    }
+    
+    
+    .skills img{
+    width: 60%;
+    }
+    
+    
+    
+    #popUp, #popUpCSS, #popUpJS{
+    position: fixed;
+    left:0;
+    width: 100%;
+    
+    }
+    #popUpJS{
+    height: 250px;
+    }
+    #icon-del{
+    position:absolute;
+    right:40px;
+    top:0;
+    z-index: 3;
+    color: blue;
+    }
+    #projects{
+        width: 100%;
+    }
+    .project-tile{
+        width: 201px;
+        left: 10%;
+     }
+    .project1-img, .project2-img{
+        width: 250px;
+    }
+    .project1-link, .project2-link{
+    top: 37%;
+    left: 30%;
+    }
+    }      
+@media  (min-width: 350px) and (max-width: 400px){
 
 #navbar ul{
 display: flex;
@@ -537,40 +693,189 @@ z-index: 3;
 color: blue;
 }
 #projects{
+    width: 100%;
+}
+.project-tile{
+    width: 201px;
+    left: 16%;
+ }
+.project1-img, .project2-img{
+    width: 250px;
+}
+.project1-link, .project2-link{
+top: 37%;
+left: 30%;
+}
+
+
+#contacts h1{
+    margin-bottom: 20px;
+}
+#contacts a{
+font-size: 10px;
+}
+#contacts div a:hover{
+position: relative;
+top: 20px;
+}
+}
+
+@media (min-width: 401px) and (max-width: 550px){
+
+    #navbar ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -3000px;
+    top: -10px;
+    height: 100vh;
+    width: 60vw;
+    background-color: white;
+    opacity: 0.5;
+    transition: 1.5s;
+    }
+    
+    #navbar ul li a{
+    font-size: 30px;
+    
+    }
+    #navbar ul li {
+    margin-inline: 0;
+        
+    }
+    
+    
+    #navbar ul li a:hover:after{
+    left: 0;
+    top: 6vh;
+    
+    }
+    .header-text{
+    font-size: 30px;
+    
+    }
+    #welcome{
+    font-size: 45px;
+    
+    }
+    .my-photo{
+    display: none;
+    }
+    
+    .info-para{
+    width: 100%
+    }
+    .info-para h1{
+    font-size: 30px;
+    }
+    .info-para p{
+    font-size: 18px;
+    position: relative;
+    margin-inline: 0;
+    }
+       
+    .info-para p:before{
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    }
+           
+       
+    
+    .skills-img-container{
+    display: inline;
+    }
+    .skills{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin-inline: 30px;
-}
-#project-tile{
-    width: 201px;
- }
-.project1-img, .project2-img{
-    width: 200px;
-    height: 200px;
-}
-}
-@media  (orientation: landscape) and (max-width: 700px){
-#navbar ul li a:hover:after{
-        left: 0;
-        top: 6vh;
-        
     }
-.container{
- 
-        left: 6%
-        
+    
+    .skills-text{
+    font-size: 35px;
+    }
+    
+    
+    .skills img{
+    width: 60%;
+    }
+    
+    
+    
+    #popUp, #popUpCSS, #popUpJS{
+    position: fixed;
+    left:0;
+    width: 100%;
+    
+    }
+    #popUpJS{
+    height: 250px;
+    }
+    #icon-del{
+    position:absolute;
+    right:40px;
+    top:0;
+    z-index: 3;
+    color: blue;
+    }
+    #projects{
+        width: 100%;
+    }
+    .project1-img, .project2-img{
+        width: 250px;
+    }
+
+    .project-tile{
+        width: 201px;
+        left: 18vw;
+     }
+     .project1-link, .project2-link{
+        top: 37%;
+        left: 30%;
         }
-        .info-para p:before{
-            content: '';
-            width: 5px;
-            height: 1200px;
-            background-color: green;
-            position: absolute;
+        #contacts h1{
+            margin-bottom: 20px;
+        }
+        #contacts a{
+        font-size: 10px;
+        }
+        #contacts div a:hover{
+        position: relative;
+        top: 20px;
+        }
+        }
+
+    
+    @media  (orientation: landscape) and (max-width: 700px){
+    #navbar ul li a:hover:after{
             left: 0;
+            top: 6vh;
+            
+        }
+    .container{
+     
+            left: 0;
+            
             }
-}
+    .info-para p:before{
+    content: '';
+    width: 5px;
+    height: 1200px;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    }
+    .project1-link, .project2-link{
+    top: 37%;
+    left: 30%;
+    }
+    #project-tile{
+    left: 20%;
+    }    
+    }
 @media  (orientation: landscape) and (min-width: 701px) and (max-width: 1000px){
     #navbar ul li a:hover:after{
             left: 0;
@@ -579,16 +884,23 @@ color: blue;
         }
     .container{
      
-            left: 8%
+            left: 5%
             
             }
 
-    .info-para p:before{
-                content: '';
-                width: 5px;
-                height: 1070px;
-                background-color: green;
-                position: absolute;
-                left: 0;
-                }
+.info-para p:before{
+content: '';
+width: 5px;
+height: 1070px;
+background-color: green;
+position: absolute;
+left: 0;
+}
+.project-tile{
+    left: 25%;
+}
+.project1-link, .project2-link{
+
+ left: 30%;
+}
     }
