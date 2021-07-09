@@ -436,7 +436,7 @@ display: none;
 font-size: 18px;
 }
 #navbar ul li{
-margin-inline: 20px;
+margin-inline: 30px;
 }
 #navbar ul li a:hover:after{
 left: 0;
