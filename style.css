@@ -24,7 +24,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 position: fixed;
-left: 5%
+left: 10%;
 }
 
 #navbar ul{
@@ -276,63 +276,76 @@ right: 0;
 top: 0;
 color: black;
 }
-
 #projects{
-position: relative;
-width: 70%;
-height: 203px;
-margin: auto;
-margin-block: 50px;
-border: 2px solid red;
+    margin: 100px 0 200px 0;
+    position: relative;
+    height: 100px;
+    width: 100%;
+
 }
 
 .project-tile{
 position: absolute;
-left: 30%;
-width: 40vw;
-display: none;
+top: 0;
+right: 10%;
+width: 80vw;
+height: 40vh;
+border-radius: 30px;
+background-color: rgb(15, 15, 78);
+transition: right 2s;
 }
 
 
 .project1-img, .project2-img{
-width: 300px;
+position: absolute;
+top: 10%;
+right: 30px;
+width: 500px;
 height: 200px;
+
 }
+.fa-chevron-left{
+    color: rgb(245, 245, 245);
+    position: absolute;
+    top: 40%;
+}
+
+
 .project1-link, .project2-link{
-text-align: center;
-border: 2px solid rgba(233, 14, 14, 0.897);
-border-radius: 20%;
-background-color: blue;
+background-color: rgb(255, 145, 0);
 color: rgb(255, 255, 255);
 position: absolute;
-top: 37%;
-left: 17%;
+top: 70%;
+left: 15%;
 padding: 10px 40px 10px 40px;
 font-size: 20px;
 font-family: monospace;
-display: none;
-}
-.button2{
-    float: right;
-}
-.project-tile:hover .project1-img{
-opacity: 0.2;
+text-decoration: none;
+z-index: 2;
 }
 
-.project-tile:hover .project1-link{
-display: inline;
-color: white
+.project1-link:before, .project2-link:before{
+content: '';
+height: 50px;
+width: 90px;
+border-radius: 50%;
+background-color: rgb(255, 145, 0);
+position: absolute;
+left: -50px;
+top: 0;
+z-index: -1;
 }
-.project-tile:hover .project2-img{
-opacity: 0.2;
-border: 2px solid red;
+.project1-link::after, .project2-link:after{
+content: '';
+height: 50px;
+width: 90px;
+border-radius: 50%;
+background-color: rgb(255, 145, 0);
+position: absolute;
+right: -50px;
+top: 0;
+z-index: -1;
 }
-    
-.project-tile:hover .project2-link{
-display: inline;
-color: white
-}
-
 #contacts{
 background-color: #086850;
 padding-bottom: 30px;
@@ -463,16 +476,7 @@ font-size: 40px;
 #popUpJS{
 height: 500px;
 }
-.project-tile{
-    left: 25%;
-}
-.project1-img, .project2-img{
-    width: 250px;
-}
-.project1-link, .project2-link{
-top: 37%;
-left: 20%;
-}
+
 
 }
 @media  (max-width: 350px){

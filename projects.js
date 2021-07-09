@@ -1,32 +1,18 @@
+const sliders = document.querySelectorAll('.fa-chevron-left')
 
-const buttons = document.querySelectorAll('#button')
-let index = 0
-document.querySelectorAll('.project-tile')[0].style.display ='block'
-Array.from(buttons).forEach(el => el.addEventListener('click', function(){slider(el.value)}))
+let index = 1
+const sliding = () => {
     
+    for(let i=0; i<document.querySelectorAll('.project-tile').length;i++){
+        document.querySelectorAll('.project-tile')[i].style.right ='-2000px'
 
-function slider(value){
-
-const projects = document.querySelectorAll('.project-tile')
-if(value==='&#x25B6;&#xFE0F;'){
-     index++
-}
-else if(value!=='&#x25B6;&#xFE0F;'){
+    }
+    document.querySelectorAll('.project-tile')[index].style.right = '10%'
     index--
-}
-if(index<0){
-    index=projects.length-1
-}
-else if(index>projects.length-1){
-    index = 0
-}
-for(let i=0; i< projects.length; i++){
-    projects[i].style.display = 'none'
-}
-projects[index].style.display = 'block'
-}
+    if(index<0){
+        index=1
+    }
 
-let screen = matchMedia('(min-width: 800px)')
-if(screen.matches){
-setInterval(function(){slider('&#x25B6;&#xFE0F;')}, 4000)
 }
+Array.from(sliders).forEach(slider => {slider.addEventListener('click', sliding)})
+
