@@ -24,7 +24,6 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 position: fixed;
-left: 10%;
 }
 
 #navbar ul{
@@ -427,7 +426,7 @@ padding-bottom: 30px;
     }
 @media (min-width:  551px) and (max-width: 900px){
 .container{
-left: 9% 
+left: 20%;
 }
 .welcome{
 top: 30vh;
@@ -449,7 +448,7 @@ display: none;
 font-size: 18px;
 }
 #navbar ul li{
-margin-inline: 20px;
+margin-inline: 30px;
 }
 #navbar ul li a:hover:after{
 left: 0;
