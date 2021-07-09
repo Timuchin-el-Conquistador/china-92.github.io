@@ -24,8 +24,8 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 position: fixed;
-left: 5%
-margin-inline: 5px;
+left: 10%
+
 }
 
 #navbar ul{
