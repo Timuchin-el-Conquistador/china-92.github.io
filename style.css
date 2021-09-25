@@ -1,16 +1,12 @@
-﻿
-
+﻿/*------------------------------------------------General and header------------*/
 *{
 margin:0;
 padding:0;
 box-sizing: border-box;
-
 }
-
 body{
 background-color: rgb(255, 255, 255);
 }
-
 #welcome-section{
 height: 100vh;
 width: 100%;
@@ -18,32 +14,28 @@ background-image: linear-gradient(#00bf8f, #001510);
 background-repeat: no-repeat;
 position: relative;
 }
-
 .container{
 display: flex;
 justify-content: space-between;
 align-items: center;
 position: fixed;
+left: 10%;
+z-index: 100;
 }
-
 #navbar ul{
 display: flex;
 list-style-type: none;
 margin-top: 10px;
 }
-
 .header-text{
 font-size: 20px;
 color: blue;
 padding: 0;
 }
-
-
 #navbar ul li{
 margin-inline: 30px;
 position: relative;
 }
-
 #navbar ul li a:hover:after{
 content: '';
 width: 100%;
@@ -52,36 +44,26 @@ position: absolute;
 left: 0;
 top: 4vh;
 background-color: red;
-
 }
-
-
-
-
-
-
 #navbar ul li a{
 color: rgb(27, 23, 214);
 font-weight: bold;
 font-size:  20px;
 text-decoration: none;
 }
+/*-------------------------------------------------------------*/
 .welcome{
 position: relative;
 top: 40vh;
 }
 #welcome{
-
 text-align: center;
 line-height: 0.9;
 font-size: 80px;
 }
-
-
-
+/*--------------------------------ICONS----------------------------*/
 .icon-del{
 display: none;
-
 }
 .icon-menu{
 position: absolute;
@@ -90,14 +72,50 @@ right: 50px;
 display:none;
 color: blue;
 }
+.icon-del2{
+position: absolute;
+right: 0;
+top: 0;
+color: black;
+}
+.icon-del2css{
+position: absolute;
+right: 0;
+top: 0;
+color: black;
+}
+.icon-del2js{
+position: absolute;
+right: 0;
+top: 0;
+color: black;
+}
     
+/*-------------------------------------------------------------------*/
+/*----------------------------------PROJECTS------------------*/
+#survey-form img{
+height:150px;
+width:200px;
+}
+#survey-form img:hover{
+opacity:0.5;
+border: 1px solid red;
+}
+#calculator img{
+height:150px;
+width:200px;
+}
+#calculator img:hover{
+opacity:0.5;
+border: 1px solid red;
+}
 
+
+/*-------------------------------------------------------*/
 .body-section{
 width: 100%;
 background-color: rgb(255, 255, 255);
 }
-
-
 .info-para {
 display: flex;
 width: 100%;
@@ -127,7 +145,6 @@ justify-content: center;
 width: 90%;
 margin: auto;
 }
-
 .skills{
 display: grid;
 grid-template-areas:  
@@ -135,66 +152,48 @@ grid-template-areas:
 'left left body body right right';
 grid-gap: 100px;
 }
-
 .skills-head{
 margin: 0 0 40px 0;
 }
-
 .skills-text{
 color: rgb(255, 1, 1);
 text-align: center;
 }
-
-
 .skills #img{
 width: 200px;
 height: 300px;
 }
-
-
-
 .html{
 grid-area: left
-
 }
 .html:hover{
 transform: scale(1.2);
-
 }
 .css{
 grid-area: body
-
 }
 .css:hover{
 transform: scale(1.2);
-
 }
 .js{
-
 grid-area: right
 }
 .js:hover{
 transform: scale(1.2);
-
 }
-
 #popUp{
-
-
-    padding: 10px 30px 0 30px;
-    height: 350px;
-    font-family: Fatface;
-    font-size: 35px;
-    width: 50%;
-    background-color: white;
-    border: 1px solid rgb(255, 0, 0);
-    color: rgb(238, 102, 12);
-    position: fixed;
-    left: 25%;
-    top: 30%;
-    
-    display: none;
-
+padding: 10px 30px 0 30px;
+height: 350px;
+font-family: Fatface;
+font-size: 35px;
+width: 50%;
+background-color: white;
+border: 1px solid rgb(255, 0, 0);
+color: rgb(238, 102, 12);
+position: fixed;
+left: 25%;
+top: 30%;
+display: none;
 }
 #popUp h1{
 text-align: center;
@@ -203,31 +202,19 @@ font-size: 20px;
 font-weight: bold;
 }
 
-.icon-del2{
-position: absolute;
-right: 0;
-top: 0;
-color: black;
-}
-
 #popUpCSS{
-
-
 padding: 10px 30px 0 30px;
 height: 370px;
 font-family: Fatface;
 font-size: 35px;
 width: 50%;
-
 background-color: white;
 border: 1px solid red;
 color: rgb(0, 19, 128);
 position: fixed;
 left: 25%;
 top: 30%;
-
 display: none;
-
 }
 #popUpCSS h1{
 text-align: center;
@@ -235,32 +222,20 @@ color: black;
 font-size: 20px;
 font-weight: bold;
 }
-.icon-del2css{
-position: absolute;
-right: 0;
-top: 0;
-color: black;
-}
-
 
 #popUpJS{
-
-
 padding: 10px 30px 0 30px;
 height: 400px;
 font-family: Fatface;
 font-size: 35px;
 width: 50%;
-
 background-color: white; 
 border: 1px solid red;
 color: rgb(126, 128, 0);
 position: fixed;
 left: 25%;
-top: 30%;
-    
+top: 30%;   
 display: none;
-
 }
 #popUpJS h1{
 text-align: center;
@@ -269,31 +244,20 @@ font-size: 20px;
 font-weight: bold;
 }
 
-.icon-del2js{
-position: absolute;
-right: 0;
-top: 0;
-color: black;
-}
-#projects{
-    margin: 100px 0 200px 0;
-    position: relative;
-    height: 100px;
-    width: 100%;
 
-}
 
 .project-tile{
 position: absolute;
 top: 0;
-right: 10%;
-width: 80vw;
+right: 5%;
+width: 90vw;
 height: 40vh;
 border-radius: 30px;
 background-color: rgb(15, 15, 78);
-transition: right 2s;
 }
-
+.project-tile[name='landing__page']{
+background-color: red;
+}
 
 .project1-img, .project2-img{
 position: absolute;
@@ -304,9 +268,9 @@ height: 200px;
 
 }
 .fa-chevron-left{
-    color: rgb(245, 245, 245);
-    position: absolute;
-    top: 40%;
+color: rgb(245, 245, 245);
+position: absolute;
+top: 40%;
 }
 
 
@@ -677,13 +641,17 @@ font-size: 35px;
 width: 60%;
 }
 
-
-
 #popUp, #popUpCSS, #popUpJS{
 position: fixed;
 left:0;
 width: 100%;
-
+}
+#popUp{
+height: 100vh;
+font-size: 35px;
+left: 0;
+top: 0;
+display: none;
 }
 #popUpJS{
 height: 250px;
@@ -696,20 +664,29 @@ z-index: 3;
 color: blue;
 }
 #projects{
-    width: 100%;
+margin: 100px 0 200px 0;
+position: relative;
+height: 200px;
+width: 100%;
 }
 .project-tile{
-    width: 201px;
-    left: 16%;
- }
-.project1-img, .project2-img{
-    width: 250px;
+width: 100vw;
+right: -1%;
 }
 .project1-link, .project2-link{
-top: 37%;
+top: 80%;
 left: 30%;
+padding: 10px 40px 10px 40px;
+font-size: 20px;
 }
 
+.project1-img, .project2-img{
+position: absolute;
+top: 1%;
+right: 0;
+border-radius: 20px;
+width: 100%;
+}
 
 #contacts h1{
     margin-bottom: 20px;
